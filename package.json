@@ -57,6 +57,7 @@
     "pg-connection-string": "^2.2.1"
   },
   "devDependencies": {
+    "typescript": "3.8.3",
     "@types/inflection": "^1.5.28",
     "@types/json5": "0.0.30",
     "@types/lodash.get": "^4.4.6",
@@ -114,6 +115,6 @@
         "LICENSE"
       ]
     },
-    "version": "0.1.74"
+    "version": "0.1.75"
   }
 }

@@ -9,6 +9,7 @@ import CompositeType from "./type/composite-type";
 import Type from "./base/type";
 import DbObject, { DbObjectConstructorArgs } from "./base/db-object";
 import MaterializedView from "./entity/materialized-view";
+import Sequence from "./entity/sequence";
 import Func from "./base/func";
 import { Procedure, NormalFunction, AggregateFunction, WindowFunction } from "..";
 
@@ -88,6 +89,19 @@ export default class Schema extends DbObject {
    * schema.materializedViews.forEach(mView => console.log(mView.name));
    */
   public readonly materializedViews: IndexableArray<MaterializedView, "name", never, true> = IndexableArray.throwingFrom([], "name");
+
+  /**
+   * All {@link Sequence sequences} of the {@link Schema schema} as an {@link IndexableArray indexable array} ordered by name.
+   *
+   * @example
+   * const mViewArray   = schema.sequences;
+   * const isAvailable  = schema.sequences.has('admin_person');
+   * const mView        = schema.sequences.get('big_account');
+   * const name         = mView.name;
+   *
+   * schema.sequences.forEach(mView => console.log(mView.name));
+   */
+  public readonly sequences: IndexableArray<Sequence, "name", never, true> = IndexableArray.throwingFrom([], "name");
 
   /**
    * All {@link Function functions} of the {@link Schema schema} as an {@link IndexableArray indexable array} ordered by name.
