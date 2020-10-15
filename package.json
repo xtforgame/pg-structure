@@ -62,7 +62,8 @@
     "@types/lodash.get": "^4.4.6",
     "@types/pg-connection-string": "^2.0.0",
     "devkeeper": "^0.1.74",
-    "pg-test-util": "^2.0.6"
+    "pg-test-util": "^2.0.6",
+    "typescript": "3.8.3"
   },
   "devkeeperModifications": {
     "files": [
